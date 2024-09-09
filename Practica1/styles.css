@@ -1,0 +1,98 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c7ead8;
+    color: #333;
+}
+
+/* Estilos de la barra de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: "SUSE";
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para los encabezados */
+h1 {
+    color: #4CAF50;
+    font-family: "Protest Guerrilla";
+}
+
+h2 {
+    color: #2196F3;
+    font-family: "Protest Guerrilla";
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+
+legend {
+    margin: 0 auto;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer {
+    background-color: black;
+    height: 80px;
+}
+
+.protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+
+.suse uniquifier {
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al stylsheet de la página (completar) -->
+    <link rel="icon" href="/Practica1/images/house.png">
+</head>
+<body>
+    <img src="/Practica1/images/programacion.jpg" alt="Imagen de inicio">
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobremi">Sobre mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal -->
+    <section id="inicio">
+        <h1>Inicio</h1>
+        <p>¡Bienvenido a mi primera página web!</p>
+    </section>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobremi">
+        <h2>Sobre mí</h2>
+        <ul>
+            <li>Me gusta la programación</li>
+            <li>Juego fútbol</li>
+            <li>Estudio en la UTD</li>
+        </ul>
+    </section>
+
+    <!-- Formulario de contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Mis datos</legend>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required>
+                <br>
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="7" placeholder="Escribe tu mensaje"></textarea>
+                <br>
+                <input type="submit" value="Enviar datos">
+            </fieldset>
+            
+        </form>
+    </section>
+    <footer>
+        <p>¡Gracias por visitar la página!</p>
+    </footer>
+    
+</body>
+</html>
