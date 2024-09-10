@@ -1,98 +1,116 @@
 /* Estilos globales */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #c7ead8;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #c7ead8;
+  color: #333;
 }
 
 /* Estilos de la barra de navegación */
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    background-color: #333;
-    padding: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-family: "SUSE";
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-family: "SUSE";
 }
 
 nav ul li a:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 /* Estilos para los encabezados */
 h1 {
-    color: #4CAF50;
-    font-family: "Protest Guerrilla";
+  color: #4caf50;
+  font-family: "Protest Guerrilla";
 }
 
 h2 {
-    color: #2196F3;
-    font-family: "Protest Guerrilla";
+  color: #2196f3;
+  font-family: "Protest Guerrilla";
 }
 
-/* Estilo para el formulario */
 form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    width: 40%;
-    
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; 
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
-
-
 
 legend {
-    margin: 0 auto;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 footer {
-    background-color: black;
-    height: 80px;
+  background-color: black;
+  height: 80px;
 }
 
 .protest-guerrilla-regular {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .suse uniquifier {
-    font-family: "SUSE", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
+  font-family: "SUSE", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
