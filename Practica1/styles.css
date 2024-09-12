@@ -1,31 +1,31 @@
-/* Estilos globales */
 body {
   font-family: Arial, sans-serif;
   background-color: #c7ead8;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos de la barra de navegación */
 nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
-  background-color: #333;
   padding: 10px;
+  margin: 0;
+  font-size: 200%;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   padding: 10px 20px;
-  font-family: "SUSE";
+  font-family: "SUSE", sans-serif;
 }
 
 nav ul li a:hover {
   background-color: #555;
 }
 
-/* Estilos para los encabezados */
 h1 {
   color: #4caf50;
   font-family: "Protest Guerrilla";
@@ -42,7 +42,7 @@ form {
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 600px; 
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -52,10 +52,10 @@ input,
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
@@ -66,7 +66,7 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  width: 100%; 
+  width: 100%;
 }
 
 input[type="submit"]:hover {
@@ -96,21 +96,93 @@ img {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 footer {
   background-color: black;
   height: 80px;
 }
 
-.protest-guerrilla-regular {
-  font-family: "Protest Guerrilla", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.suse uniquifier {
-  font-family: "SUSE", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
+.productos {
+  flex: 1 1 200px;
+  background-color: rgb(205, 221, 242);
+  text-align: center;
+  border: 1px solid #333;
+  padding: 15px;
+  box-shadow: 0px 2px 5px;
+}
+
+.productos h3 {
+  font-family: "Protest Guerrilla";
+}
+
+.productos img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.encabezado {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.encabezado img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }

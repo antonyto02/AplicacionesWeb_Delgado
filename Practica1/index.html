@@ -3,27 +3,30 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practica 1</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Enlace al stylsheet de la página (completar) -->
-    <link rel="icon" href="/Practica1/images/house.png" />
+    <link rel="icon" href="/Practica1/assets/images/house.png" />
+    <script src="/Practica1/scripts/slider.js" defer></script>
   </head>
   <body>
-    <img src="/Practica1/images/programacion.jpg" alt="Imagen de inicio" />
-    <!-- Barra de navegación -->
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="encabezado">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobremi">Quienes somos</a></li>
+          <li><a href="#galeria-productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="slider">
+        <img src="/Practica1/assets/images/encabezado1.jpg" alt="encabezado1" class="slide active" />
+        <img src="/Practica1/assets/images/encabezado2.jpg" alt="encabezado2" class="slide" />
+        <img src="/Practica1/assets/images/encabezado3.jpg" alt="encabezado3" class="slide" />
+      </div>
+    </div>
 
     <!-- Sección principal -->
     <section id="inicio">
@@ -33,12 +36,44 @@
 
     <!-- Sección "Sobre mí" -->
     <section id="sobremi">
-      <h2>Sobre mí</h2>
-      <ul>
-        <li>Me gusta la programación</li>
-        <li>Juego fútbol</li>
-        <li>Estudio en la UTD</li>
-      </ul>
+      <h2>Quienes somos</h2>
+      <p>Somos una empresa dedicada a la venta de gadgets apple</p>
+    </section>
+
+    <section id="galeria-productos">
+      <h2>Productos</h2>
+      <div class="galeria">
+        <div class="productos">
+          <h3>FUNDA AZUL</h3>
+          <img src="/Practica1/assets/images/producto1.jpeg" alt="producto1" />
+          <p>Funda para Iphone de color azul</p>
+          <button>Comprar</button>
+        </div>
+        <div class="productos">
+          <h3>FUNDA ROSA</h3>
+          <img src="/Practica1/assets/images/producto2.jpeg" alt="producto2" />
+          <p>Funda para Iphone de color rosa</p>
+          <button>Comprar</button>
+        </div>
+        <div class="productos">
+          <h3>FUNDA ROJA</h3>
+          <img src="/Practica1/assets/images/producto3.jpeg" alt="producto3" />
+          <p>Funda para Iphone de color rojo</p>
+          <button>Comprar</button>
+        </div>
+        <div class="productos">
+          <h3>Audífonos blancos</h3>
+          <img src="/Practica1/assets/images/producto4.avif" alt="producto4" />
+          <p>Audífonos blancos</p>
+          <button>Comprar</button>
+        </div>
+        <div class="productos">
+          <h3>Audífonos morados</h3>
+          <img src="/Practica1/assets/images/producto5.webp" alt="producto5" />
+          <p>Audífonos morados</p>
+          <button>Comprar</button>
+        </div>
+      </div>
     </section>
 
     <!-- Formulario de contacto -->
@@ -48,37 +83,22 @@
         <fieldset>
           <legend>Mis datos</legend>
           <label for="name">Nombre</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Ingresa tu nombre"
-            required
-          />
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required />
           <br />
           <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ingresa tu email"
-            required
-          />
+          <input type="email" id="email" name="email" placeholder="Ingresa tu email" required />
           <br />
           <label for="message">Mensaje</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="7"
-            placeholder="Escribe tu mensaje"
-          ></textarea>
+          <textarea id="message" name="message" rows="7" placeholder="Escribe tu mensaje"></textarea>
           <br />
           <input type="submit" value="Enviar datos" />
         </fieldset>
       </form>
     </section>
+
     <footer>
       <p>¡Gracias por visitar la página!</p>
     </footer>
   </body>
 </html>
+
