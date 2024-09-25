@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" href="assets/images/house.png" />
+    <script src="scripts/slider.js" defer></script>
+</head>
+<body>
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobremi">Quienes somos</a></li>
+                <li><a href="#galeria-productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="slider">
+            <img src="assets/images/encabezado1.jpg" alt="encabezado1" class="slide active" />
+            <img src="assets/images/encabezado2.jpg" alt="encabezado2" class="slide" />
+            <img src="assets/images/encabezado3.jpg" alt="encabezado3" class="slide" />
+        </div>
+    </div>
+
+    <section id="inicio">
+        <h1>Inicio</h1>
+        <p>¡Bienvenido a mi primera página web!</p>
+    </section>
+
+    <section id="sobremi">
+        <h2>Quienes somos</h2>
+        <p>Somos una empresa dedicada a la venta de gadgets Apple.</p>
+    </section>
+
+    <section id="galeria-productos">
+        <h2>Productos</h2>
+        <div class="galeria">
+            <div class="productos">
+                <h3>FUNDA AZUL</h3>
+                <img src="assets/images/producto1.jpeg" alt="Funda Azul" />
+                <p>Funda para iPhone de color azul</p>
+                <p>$ 100.00</p>
+                <a href="vista-producto.html?id_producto=1"><button>Comprar</button></a>
+            </div>
+            <div class="productos">
+                <h3>FUNDA ROSA</h3>
+                <img src="assets/images/producto2.jpeg" alt="Funda Rosa" />
+                <p>Funda para iPhone de color rosa</p>
+                <p>$ 100.00</p>
+                <a href="vista-producto.html?id_producto=2"><button>Comprar</button></a>
+            </div>
+            <div class="productos">
+                <h3>FUNDA ROJA</h3>
+                <img src="assets/images/producto3.jpeg" alt="Funda Roja" />
+                <p>Funda para iPhone de color rojo</p>
+                <p>$ 100.00</p>
+                <a href="vista-producto.html?id_producto=3"><button>Comprar</button></a>
+            </div>
+            <div class="productos">
+                <h3>Audífonos blancos</h3>
+                <img src="assets/images/producto4.avif" alt="Audífonos blancos" />
+                <p>Audífonos blancos de alta calidad</p>
+                <p>$ 100.00</p>
+                <a href="vista-producto.html?id_producto=4"><button>Comprar</button></a>
+            </div>
+            <div class="productos">
+                <h3>Audífonos morados</h3>
+                <img src="assets/images/producto5.webp" alt="Audífonos morados" />
+                <p>Audífonos morados con excelente sonido</p>
+                <p>$ 100.00</p>
+                <a href="vista-producto.html?id_producto=5"><button>Comprar</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 style="text-align: center;">Contacto</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Mis datos</legend>
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required />
+                <br />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu email" required />
+                <br />
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="7" placeholder="Escribe tu mensaje"></textarea>
+                <br />
+                <input type="submit" value="Enviar datos" />
+            </fieldset>
+        </form>
+    </section>
+
+<footer class="footer">
+    <p>¡Gracias por visitar la página!</p>
+</footer>
+
+</body>
+</html>
