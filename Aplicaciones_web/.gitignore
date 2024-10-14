@@ -1,0 +1,15 @@
+# Ignorar el entorno virtual
+env/
+
+# Archivos temporales de Python
+*.pyc
+_pycache_/
+
+# Archivos de migraciones de Django (opcional)
+/migrations/.py
+
+# Base de datos local (si usas SQLite por defecto)
+db.sqlite3
+
+# Archivos generados por el sistema operativo
+.DS_Store
