@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets Bull</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header-background">
+        <div class="top-bar">
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-left"></a>
+            
+            <p>Envio gratis a todo México en compras mayores a $599</p>
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-right"></a>
+            
+        </div>
+        <div class="encabezado">
+            <div class="slider">
+              <img src="{% static 'img/encabezado1.jpg' %}" alt="encabezado1" class="slide active" />
+              <img src="{% static 'img/encabezado2.jpg' %}" alt="encabezado2" class="slide" />
+              <img src="{% static 'img/encabezado3.jpg' %}" alt="encabezado3" class="slide" />
+            </div>
+          </div>
+        
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Redlemon Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><img src="{% static 'img/account.png' %}" alt="Cuenta Icon"> Cuenta</a>
+                <a href="#"><img src="{% static 'img/wishlist.png' %}" alt="Wishlist Icon"> Wishlist</a>
+                <a href="#"><img src="{% static 'img/cart.png' %}" alt="Carrito Icon"> Carrito</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'producto_list' %}" title="Productos"><img src="{% static 'img/case.png' %}" alt="Productos Icon"> Productos</a></li>
+            <li><a href="/quienes-somos.html" title="Quienes Somos"><img src="{% static 'img/group.png' %}" alt="Quienes Somos Icon"> Quienes somos</a></li>
+            <li><a href="https://www.instagram.com/gadgetsbullmx" target="_blank" title="Instagram"><img src="{% static 'img/instagram.png' %}" alt="Instagram Icon"> Instagram</a></li>
+            <li><a href="https://wa.me/6678641879" target="_blank" title="WhatsApp"><img src="{% static 'img/whatsapp.png' %}" alt="WhatsApp Icon"> WhatsApp</a></li>
+            <li><a href="{% url 'ubicacion' %}" title="Ubicación"><img src="{% static 'img/location.png' %}" alt="Ubicación Icon"> Ubicación</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>PRODUCTOS</h1>
+        <div class="product-grid">
+            {% for producto in productos %}
+                <div class="product">
+                    <!-- Muestra la imagen del producto -->
+                    {% if producto.imagen %}
+                        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                    {% else %}
+                        <img src="{% static 'productos_app/img/placeholder.png' %}" alt="Sin imagen"> 
+                    {% endif %}
+                    
+                    <p class="product-name">{{ producto.nombre }}</p>
+                    <p class="product-price">${{ producto.precio }}</p>
+                    <a href="{% url 'producto_detalle' producto.id %}" class="buy-now-button">Comprar</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            <a href="">« Anterior</a>
+            <a href="/" class="active">1</a>
+            <a href="/index2.html" >2</a>
+            <a href="/index2.html">Siguiente »</a>
+        </div>
+        
+    </main>
+    <footer>
+        <p>© 2024 Gadgets Bull. Todos los derechos reservados.</p>
+    </footer>
+    <script src="{% static 'js/slider.js' %}"></script>
+</body>
+</html>

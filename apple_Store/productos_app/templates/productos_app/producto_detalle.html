@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ producto.nombre }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header-background">
+        <div class="top-bar">
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-left"></a>
+            <p>Envio gratis a todo México en compras mayores a $599</p>
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-left"></a>
+        </div>
+        
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Redlemon Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><img src="{% static 'img/account.png' %}" alt="Cuenta Icon"> Cuenta</a>
+                <a href="#"><img src="{% static 'img/wishlist.png' %}" alt="Wishlist Icon"> Wishlist</a>
+                <a href="#"><img src="{% static 'img/cart.png' %}" alt="Carrito Icon"> Carrito</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'producto_list' %}" title="Productos"><img src="{% static 'img/case.png' %}" alt="Productos Icon"> Productos</a></li>
+            <li><a href="/quienes-somos.html" title="Quienes Somos"><img src="{% static 'img/group.png' %}" alt="Quienes Somos Icon"> Quienes somos</a></li>
+            <li><a href="https://www.instagram.com/gadgetsbullmx" target="_blank" title="Instagram"><img src="{% static 'img/instagram.png' %}" alt="Instagram Icon"> Instagram</a></li>
+            <li><a href="https://wa.me/6678641879" target="_blank" title="WhatsApp"><img src="{% static 'img/whatsapp.png' %}" alt="WhatsApp Icon"> WhatsApp</a></li>
+            <li><a href="{% url 'ubicacion' %}" title="Ubicación"><img src="{% static 'img/location.png' %}" alt="Ubicación Icon"> Ubicación</a></li>
+        </ul>
+    </nav>
+    <div class="product-detail-container">
+        {% if producto.imagen %}
+        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="product-image">
+        {% endif %}
+        <h1>{{ producto.nombre }}</h1>
+        <p>Descripción: {{ producto.descripcion }}</p>
+        <p class="product-price">Precio: ${{ producto.precio }}</p>
+
+        <form method="post" class="purchase-form">
+            {% csrf_token %}
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" class="quantity-input" value="1" min="1" max="{{ producto.stock }}" required>
+            <button type="submit" class="buy-button">Comprar</button>
+        </form>
+
+        <a href="{% url 'producto_list' %}" class="back-link">Volver a Productos</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadgets Bull - Ubicación</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header-background">
+        <div class="top-bar">
+            <img src="/img/background2.png" alt="Logo Gadgets Bull" class="logo-left">
+            <p>Envio gratis a todo México en compras mayores a $599</p>
+            <img src="/img/background2.png" alt="Logo Gadgets Bull" class="logo-right">
+        </div>
+        <div class="header-content">
+            <div class="logo">
+                <img src="/img/logo.png" alt="Gadgets Bull Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><img src="/img/account.png" alt="Cuenta Icon"> Cuenta</a>
+                <a href="#"><img src="/img/wishlist.png" alt="Wishlist Icon"> Wishlist</a>
+                <a href="#"><img src="/img/cart.png" alt="Carrito Icon"> Carrito</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <ul>
+                <li><a href="/" title="Productos"><img src="/img/case.png" alt="Productos Icon"> Productos</a></li>
+                <li><a href="/quienes-somos.html" title="Quienes Somos"><img src="/img/group.png" alt="Quienes Somos Icon"> Quienes somos</a></li>
+                <li><a href="https://www.instagram.com/gadgetsbullmx" target="_blank" title="Instagram"><img src="/img/instagram.png" alt="Instagram Icon"> Instagram</a></li>
+                <li><a href="https://wa.me/6678641879" target="_blank" title="WhatsApp"><img src="/img/whatsapp.png" alt="WhatsApp Icon"> WhatsApp</a></li>
+                <li><a href="/ubicacion.html" title="Ubicación"><img src="/img/location.png" alt="Ubicación Icon"> Ubicación</a></li>
+            </ul>
+            
+        </ul>
+    </nav>
+    <main>
+        <h1>Ubicación</h1>
+        <p>Visítanos en nuestra tienda física ubicada en:</p>
+        <p><strong>Elorriaga 125, Zona Centro, CP 34000, Durango, Durango.</strong></p>
+        <a href="https://www.google.com.mx/maps/place/Elorreaga+125,+Zona+Centro,+34000+Durango,+Dgo./@24.0331987,-104.6668968,16.53z/data=!4m6!3m5!1s0x869bc826810f062d:0x46ddeb5187cbcc2a!8m2!3d24.0331264!4d-104.6643969!16s%2Fg%2F11fk14pkcc?entry=ttu" target="_blank">
+            <img src="/img/ubicacion.png" alt="Mapa de ubicación" class="map-image">
+        </a>
+        
+    </main>
+    <footer>
+        <p>© 2024 Gadgets Bull. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra Exitosa</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header class="header-background">
+        <div class="top-bar">
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-left"></a>
+            <p>Envio gratis a todo México en compras mayores a $599</p>
+            <a href="{% url 'login' %}"><img src="{% static 'img/background2.png' %}" alt="Logo Gadgets Bull" class="logo-left"></a>
+        </div>
+        
+        <div class="header-content">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="Redlemon Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button>Buscar</button>
+            </div>
+            <div class="user-actions">
+                <a href="#"><img src="{% static 'img/account.png' %}" alt="Cuenta Icon"> Cuenta</a>
+                <a href="#"><img src="{% static 'img/wishlist.png' %}" alt="Wishlist Icon"> Wishlist</a>
+                <a href="#"><img src="{% static 'img/cart.png' %}" alt="Carrito Icon"> Carrito</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'producto_list' %}" title="Productos"><img src="{% static 'img/case.png' %}" alt="Productos Icon"> Productos</a></li>
+            <li><a href="/quienes-somos.html" title="Quienes Somos"><img src="{% static 'img/group.png' %}" alt="Quienes Somos Icon"> Quienes somos</a></li>
+            <li><a href="https://www.instagram.com/gadgetsbullmx" target="_blank" title="Instagram"><img src="{% static 'img/instagram.png' %}" alt="Instagram Icon"> Instagram</a></li>
+            <li><a href="https://wa.me/6678641879" target="_blank" title="WhatsApp"><img src="{% static 'img/whatsapp.png' %}" alt="WhatsApp Icon"> WhatsApp</a></li>
+            <li><a href="{% url 'ubicacion' %}" title="Ubicación"><img src="{% static 'img/location.png' %}" alt="Ubicación Icon"> Ubicación</a></li>
+        </ul>
+    </nav>
+
+    <main style="text-align: center; margin-top: 50px;">
+        <div class="confirmation-box" style="display: inline-block; padding: 30px; border-radius: 10px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 50%;">
+            <h1 style="color: #dc0808;">Compra Exitosa</h1>
+            <p>Gracias por su compra. Pronto nos pondremos en contacto para la entrega.</p>
+            <a href="{% url 'producto_list' %}" style="color: #007bff; font-weight: bold;">Volver a Productos</a>
+        </div>
+    </main>
+</body>
+</html>
+
